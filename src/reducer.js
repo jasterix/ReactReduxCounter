@@ -8,9 +8,11 @@ export default function reducer(state = initialState, action) {
       return { ...state, counter: state.counter + 1 };
     case "decrement":
       return { ...state, counter: state.counter - 1 };
+    case "upFive":
+      return { ...state, counter: state.counter + 5 };
     default:
       return { ...state };
   }
 }
 
-export const { increment, decrement } = reducer;
+export const { increment, decrement, upFive } = reducer;
